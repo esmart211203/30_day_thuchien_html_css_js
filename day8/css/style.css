@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --success-color: #2691d9;
+    --eroor-color: #e74c3c;
+}
+
+body {
+    height: 100vh;
+    background: linear-gradient(120deg, #3ca7ee, #9b408f);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Poppins";
+}
+
+.container {
+    width: 400px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.form-control {
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
+}
+
+.form-control input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #adadad;
+}
+
+.form-control span {
+    position: absolute;
+    border: 2px solid var(--success-color);
+    left: 0;
+    width: 0%;
+    top: 38px;
+    transition: 0.3s;
+}
+
+.form-control input:focus~span {
+    width: 100%;
+}
+
+.form-control.error {
+    color: var(--eroor-color);
+}
+
+.form-control.error input {
+    border-bottom: 2px solid var(--eroor-color);
+}
+
+.btn-submit {
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    margin: 20px 0;
+    background: var(--success-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-submit:hover {
+    background: #069a;
+}
+
+.signup-link {
+    text-align: center;
+}
+
+.signup-link a {
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--success-color);
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}

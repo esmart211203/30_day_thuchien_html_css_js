@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Roboto:wght@100&display=swap');
+:root{
+    --primary-color: #4daf54;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    background: #4daf54;
+    font-family: "Poppins";
+}
+.card{
+    margin: 120px auto;
+    width: 320px;
+    height: 420px;
+    padding: 20px;
+    border-radius: 15px;
+    color: white;
+    background: #272d40;
+    position: relative;
+}
+.card-heart,.card-cart{
+    font-size: 25px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    cursor: pointer;
+}
+.card-cart{
+    left: unset;
+    right: 20px;
+}
+.card-image{
+    width: 90%;
+    transition: .5s;
+}
+.card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.card-title,.card-price{
+    font-style: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.card-title{
+    color: var(--primary-color);
+}
+.card-size,.card-color{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.card-size span{
+    border-radius: 5px;
+    background: #fff;
+    padding: 1px 10px;
+    margin: 0 2px;
+    color: black;
+}
+.card-color span{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.xanh{
+    background-color: #4daf54;
+}
+.do{
+    background-color: red;
+}
+.vang{
+    background-color: yellow;
+}
+.card-action button{
+    background: var(--primary-color);
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: .25s;
+    cursor: pointer;
+}
+.card-action button:hover{
+    transform: scale(0.9);
+}
+/* hover */
+.card:hover .card-image{
+    transform: translateY(-90px) rotate(-20deg);
+}
+.card:hover .card-title{
+    transform: translate(-68px,-72px);
+}
+.card:hover .card-price{
+    transform: translate(-117px,-72px);
+}
+.card-size{
+    margin-top: 150px;
+}
+.card-size,.card-color,.card-action{
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+    transition-delay: .4s;
+}
+.card:hover .card-size,
+.card:hover .card-color,
+.card:hover .card-action{
+    visibility: visible;
+    opacity: 100;
+}
+.card:hover .card-size{
+    margin-top: -30px;
+}
